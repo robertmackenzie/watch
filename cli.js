@@ -38,6 +38,7 @@ var skip = dirLen - 1
 for(i = 0; i < dirLen; i++) {
   var dir = dirs[i]
   console.error('> Watching', dir)
+  watchTreeOpts.interval = 500;
   watch.watchTree(dir, watchTreeOpts, function (f, curr, prev) {
     if(skip) {
         skip--
